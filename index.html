@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper teal lighten-2">
+            <div class="row">
+                <div class="col s2">
+                    <a href="" class="brand-logo">
+                        <img class="responsive-img" width="150px" height="auto" src="https://www.galileo.edu/wp-content/uploads/2023/01/Galileo-Sin-slogan.png">
+                    </a>
+                </div>
+                <div class="col s2">TAREA #3</div>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a onclick="showform1()">Formulario 1</a></li>
+                    <li><a onclick="showform2()">Formulario 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row">
+      <div class="col s1 m6">
+        <div class="card cyan darken-4 darken-1">
+          <div class="card-content white-text" style="min-height: 60vh;">
+            <span class="card-title">Card Title</span>
+            <b>Nombre:</b>Pablo Alejandro Reyes Gramajo <br>
+            <b>Carnet:</b>20004748 <br>
+            <b>Curso:</b>Fundamentos de Aplicaciones Web <br>
+            <b>Año:</b>2024 <br>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s2 m6" id="column1">
+        <div class="card cyan darken-4">
+          <div class="card-content white-text">
+
+            <div class="row">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <input placeholder="Nombre" id="first_name" type="text" class="validate">
+                  </div>
+                  <div class="input-field col s6">
+                    <input id="last_name" placeholder="Apellido" type="text" class="validate">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input  placeholder="Apellido" id="disabled" type="text" class="validate">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s4">
+                    <input placeholder="Cumpleaños" id="first_name" type="text" class="validate">
+                  </div>
+                  <div class="input-field col s4">
+                    <input id="last_name" placeholder="Carnet" type="text" class="validate">
+                  </div>
+                  <div class="input-field col s4">
+                    <input id="last_name" placeholder="Carnet" type="text" class="validate">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <input id="email" placeholder="Email" type="email" class="validate">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="input-field col s12">
+                    <select>
+                      <option value="" disabled selected>Escoja una direccion</option>
+                      <option value="1">Direccion 1</option>
+                      <option value="2">Direccion 2</option>
+                      <option value="3">Direccion 3</option>
+                    </select>
+                    <label>Direccion</label>
+                  </div>                
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                    var elems = document.querySelectorAll('select');
+                     M.FormSelect.init(elems);
+                    });
+                </script>          
+                <div class="row">
+                  <div class="col s12">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">
+                      <i class="material-icons right">Grabar</i>
+                    </button>   
+                  </div>
+                </div>
+
+              </form>
+            </div>              
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col s2 m6" id="column2">
+        <div class="card cyan darken-4">
+          <div class="card-content white-text">
+            
+            <form action="#">
+              <b>Sexo</b>
+              <p>
+                <label>
+                  <input name="group1" type="radio" checked />
+                  <span>Masculino</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input name="group1" type="radio" />
+                  <span>Femenino</span>
+                </label>
+              </p>
+            </form>
+                  <br>
+                  <form action="#">
+                    <b>Escoja el porcentaje de conocimiento</b>
+                    <p class="range-field">
+                      HTML
+                      <input type="range" id="test5" min="0" max="100" />
+                    </p>
+                    <p class="range-field">
+                      CSS
+                      <input type="range" id="test5" min="0" max="100" />
+                    </p>
+                  </form>
+                
+                  <div class="row white-text">
+                    <div class="col s12">
+                      <button class="btn waves-effect waves-light" type="submit" name="action">
+                        <i class="material-icons right">Grabar</i>
+                      </button>  
+                      
+                      <button class="btn waves-effect waves-light" type="submit" name="action">
+                        <i onclick="showform1()" class="material-icons right">Retornar</i>
+                      </button> 
+                    </div>
+                  </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

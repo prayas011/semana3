@@ -1,0 +1,10 @@
+input{
+    color: white;
+}
+.card{
+    border-radius: 10px !important;
+}
+
+#column2{
+    display: none;
+}
